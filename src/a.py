@@ -1,12 +1,8 @@
+import numpy as np
 import pandas as pd
+from datascience import *
+%matplotlib inline
 
-df = pd.DataFrame([
-  ['Apple', 7, 5, 'Fruit'],
-  ['Banana', 3, 6, 'Fruit'],
-  ['Beef', 5, 2, 'Meal'],
-  ['Kimchi', 4, 8, 'Meal']],
-  columns=["Name", "Frequency", "Importance", "Type"],
-  index=["A", "B", "C", "D"])
-
-df["Gap"] = df.groupby("Type")["Frequency"].apply(lambda x: x - x.mean())
-print(df)
+path_data="/home/daniel/code_space/Data-SCI-basic/csv/"
+united = Table.read_table(path_data + 'united_summer2015.csv')
+united
