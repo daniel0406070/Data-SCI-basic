@@ -24,4 +24,3 @@ except:
 
 little_women_chapters = little_women_text.text.split('CHAPTER ')[1:]
 
-ta
